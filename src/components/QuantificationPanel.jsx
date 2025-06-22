@@ -80,8 +80,8 @@ export default function QuantificationPanel({ result }) {
             color="red"
             label="Total Prothylakoid Length"
             value={`${
-              result?.analysis?.Prothylakoid?.area_um2
-                ? result?.analysis?.Prothylakoid?.area_um2
+              result?.analysis?.Prothylakoid?.total_length_um
+                ? result?.analysis?.Prothylakoid?.total_length_um
                 : "0"
             } µm²`}
           />
