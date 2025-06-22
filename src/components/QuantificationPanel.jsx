@@ -1,5 +1,31 @@
-// 7. QuantificationPanel.jsx
-export default function QuantificationPanel() {
+/* 
+{
+    "analysis": {
+        "Etioplast": {
+            "area_um2": 8.100000381469727,
+            "count": 1
+        },
+        "PLB": {
+            "area_um2": 4.0,
+            "count": 1
+        },
+        "Prothylakoid": {
+            "count": 3,
+            "total_length_um": 38.369998931884766
+        },
+        "Plastoglobule": {
+            "count": 0,
+            "avg_diameter_um": 0.0
+        }
+    },
+    "scale_used": "0.006944 µm/pixel",
+    "output_image_url": "http://127.0.0.1:8000/media/outputs/output_bcd9dfd790cc4bf7ab78d802255fb2cb.png"
+}
+
+
+
+*/
+export default function QuantificationPanel({ result }) {
   return (
     <section className="py-12">
       <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-slate-200/50 max-w-5xl mx-auto">
@@ -23,19 +49,59 @@ export default function QuantificationPanel() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <QuantCard color="yellow" label="Etioplast Area" value="12.8 µm²" />
-          <QuantCard color="purple" label="PLB Area" value="3.4 µm²" />
-          <QuantCard color="red" label="Prothylakoid Count" value="4" />
+          <QuantCard
+            color="yellow"
+            label="Etioplast Area"
+            value={`${
+              result?.analysis?.Etioplast?.area_um2
+                ? result?.analysis?.Etioplast?.area_um2
+                : "0"
+            } µm²`}
+          />
+          <QuantCard
+            color="purple"
+            label="PLB Area"
+            value={`${
+              result?.analysis?.PLB?.area_um2
+                ? result?.analysis?.PLB?.area_um2
+                : "0"
+            } µm²`}
+          />
+          <QuantCard
+            color="red"
+            label="Prothylakoid Count"
+            value={`${
+              result?.analysis?.Prothylakoid?.count
+                ? result?.analysis?.Prothylakoid?.count
+                : "0"
+            } `}
+          />
           <QuantCard
             color="red"
             label="Total Prothylakoid Length"
-            value="52.6 µm"
+            value={`${
+              result?.analysis?.Prothylakoid?.area_um2
+                ? result?.analysis?.Prothylakoid?.area_um2
+                : "0"
+            } µm²`}
           />
-          <QuantCard color="blue" label="Plastoglobule Count" value="24" />
+          <QuantCard
+            color="blue"
+            label="Plastoglobule Count"
+            value={`${
+              result?.analysis?.Plastoglobule?.count
+                ? result?.analysis?.Plastoglobule?.count
+                : "0"
+            } `}
+          />
           <QuantCard
             color="blue"
             label="Avg. Plastoglobule Diameter"
-            value="0.28 µm"
+            value={`${
+              result?.analysis?.Plastoglobule?.avg_diameter_um
+                ? result?.analysis?.Plastoglobule?.avg_diameter_um
+                : "0"
+            } µm²`}
           />
         </div>
       </div>

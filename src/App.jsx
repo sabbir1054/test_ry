@@ -7,33 +7,7 @@ import Hero from "./components/Hero";
 import QuantificationPanel from "./components/QuantificationPanel";
 import ResultsDisplay from "./components/ResultsDisplay";
 import UploadSection from "./components/UploadSection";
-/* 
-{
-    "analysis": {
-        "Etioplast": {
-            "area_um2": 8.100000381469727,
-            "count": 1
-        },
-        "PLB": {
-            "area_um2": 4.0,
-            "count": 1
-        },
-        "Prothylakoid": {
-            "count": 3,
-            "total_length_um": 38.369998931884766
-        },
-        "Plastoglobule": {
-            "count": 0,
-            "avg_diameter_um": 0.0
-        }
-    },
-    "scale_used": "0.006944 µm/pixel",
-    "output_image_url": "http://127.0.0.1:8000/media/outputs/output_bcd9dfd790cc4bf7ab78d802255fb2cb.png"
-}
 
-
-
-*/
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [result, setResult] = useState({});
@@ -78,7 +52,7 @@ function App() {
             setSelectedFile={setSelectedFile}
           />
           <ResultsDisplay result={result} />
-          <QuantificationPanel />
+          <QuantificationPanel result={result} />
           <About />
         </main>
         <Footer />
