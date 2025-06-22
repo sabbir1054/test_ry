@@ -24,8 +24,8 @@ export default function UploadSection({ handleDetection, setSelectedFile }) {
   };
 
   return (
-    <section id="upload" className="py-12">
-      <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-slate-200/50 max-w-2xl mx-auto">
+    <section id="upload" className="py-12 pb-2">
+      <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-slate-200/50 max-w-2xl mx-auto">
         <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
           <div className="bg-emerald-100 p-2 rounded-lg">
             <svg

@@ -27,7 +27,7 @@
 */
 export default function QuantificationPanel({ result }) {
   return (
-    <section className="py-12">
+    <section className="py-12 pt-2">
       <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-slate-200/50 max-w-5xl mx-auto">
         <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
           <div className="bg-emerald-100 p-2 rounded-lg">
