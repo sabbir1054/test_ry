@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="mt-24 md:mt-32 text-center">
+    <section id="about" className="mt-24 md:mt-32 text-center bg-grid-pattern">
       <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
         How It Works
       </h2>
@@ -8,7 +8,7 @@ export default function About() {
         Advanced machine learning algorithms analyze electron microscopy images
         to identify and quantify etioplast structures with high precision.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
         {[
           {
             icon: "M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12",
@@ -28,9 +28,9 @@ export default function About() {
         ].map((step, i) => (
           <div
             key={i}
-            className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-slate-200/50 hover:shadow-2xl transition-shadow duration-300"
+            className="bg-white/90 backdrop-blur-md border border-slate-200 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300"
           >
-            <div className="bg-gradient-to-br from-emerald-100 to-teal-100 text-emerald-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
+            <div className="bg-emerald-100 text-emerald-600 rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6">
               <svg
                 className="h-8 w-8"
                 fill="none"
@@ -45,10 +45,10 @@ export default function About() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-slate-900 mb-3">
+            <h3 className="text-xl font-semibold text-slate-900 mb-2">
               {step.title}
             </h3>
-            <p className="text-slate-600">{step.desc}</p>
+            <p className="text-slate-600 text-sm">{step.desc}</p>
           </div>
         ))}
       </div>

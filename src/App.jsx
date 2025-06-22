@@ -53,8 +53,8 @@ function App() {
           />
           <ResultsDisplay result={result} />
           <QuantificationPanel result={result} />
-          <About />
         </main>
+        <About />
         <Footer />
       </div>
     </>
